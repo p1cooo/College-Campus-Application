@@ -1,0 +1,8 @@
+{
+  "name": "Remix: MCKL Campus",
+  "description": "Premium mobile campus companion for MCKL students, featuring personalized schedules, attendance trackers, academic resources, and notifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
