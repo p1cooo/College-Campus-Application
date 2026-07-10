@@ -1508,17 +1508,12 @@ export default function App() {
                           <div className="flex justify-between items-center">
                             <span className={`px-2 py-0.5 rounded-md text-[9px] font-bold uppercase tracking-wider border ${
                               ann.category === 'Events' ? 'bg-purple-50 text-purple-600 border-purple-100/50' :
-                              ann.category === 'Academic' ? 'bg-navy-50 text-navy-600 border-navy-100/50' :
-                              'bg-teal-50 text-teal-600 border-teal-100/50'
+                              ann.category === 'Academic' ? 'bg-indigo-50 text-indigo-600 border-indigo-100/50' :
+                              'bg-sky-50 text-sky-600 border-sky-100/50'
                             }`}>
                               {ann.category}
                             </span>
                             <div className="flex items-center gap-1.5">
-                              {ann.unread && (
-                                <span className="bg-gold-100 text-gold-700 border border-gold-200/50 text-[9px] font-extrabold px-1.5 py-0.5 rounded-md uppercase tracking-wider">
-                                  New
-                                </span>
-                              )}
                               <span className="text-[10px] text-slate-400 font-semibold">{ann.date}</span>
                             </div>
                           </div>
@@ -1830,11 +1825,6 @@ export default function App() {
                           <div className="flex justify-between items-start">
                             <div className="space-y-1">
                               <div className="flex items-center gap-1.5">
-                                {notif.unread && (
-                                  <span className="bg-gold-100 text-gold-700 border border-gold-200/50 text-[9px] font-extrabold px-1.5 py-0.5 rounded-md uppercase tracking-wider">
-                                    New
-                                  </span>
-                                )}
                                 <span className="text-[10px] text-slate-400 font-bold">{notif.date}</span>
                               </div>
                               <h3 className={`text-navy-950 text-xs leading-snug line-clamp-1 pr-6 ${
@@ -1849,6 +1839,7 @@ export default function App() {
                             <span className={`px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase shrink-0 tracking-wider border ${
                               notif.urgency === 'URGENT' ? 'bg-rose-50 text-rose-600 border-rose-100/40 animate-pulse' :
                               notif.urgency === 'IMPORTANT' ? 'bg-amber-50 text-amber-600 border-amber-100/40' :
+                              notif.urgency === 'NEW' ? 'bg-emerald-50 text-emerald-600 border-emerald-100/40' :
                               'bg-navy-50 text-navy-600 border-navy-100/40'
                             }`}>
                               {notif.urgency}
@@ -1989,8 +1980,8 @@ export default function App() {
                 <div className="flex justify-between items-center">
                   <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
                     viewingAnnouncement.category === 'Events' ? 'bg-purple-50 text-purple-600 border border-purple-100' :
-                    viewingAnnouncement.category === 'Academic' ? 'bg-navy-50 text-navy-600 border border-navy-100/40' :
-                    'bg-teal-50 text-teal-600 border border-teal-100'
+                    viewingAnnouncement.category === 'Academic' ? 'bg-indigo-50 text-indigo-600 border border-indigo-100' :
+                    'bg-sky-50 text-sky-600 border border-sky-100'
                   }`}>
                     {viewingAnnouncement.category}
                   </span>
@@ -2056,6 +2047,7 @@ export default function App() {
                   <span className={`px-2 py-0.5 rounded-full text-[9px] font-extrabold uppercase tracking-wider ${
                     viewingNotification.urgency === 'URGENT' ? 'bg-rose-50 text-rose-600 border border-rose-100' :
                     viewingNotification.urgency === 'IMPORTANT' ? 'bg-amber-50 text-amber-600 border-amber-100' :
+                    viewingNotification.urgency === 'NEW' ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' :
                     'bg-navy-50 text-navy-600 border border-navy-100/40'
                   }`}>
                     {viewingNotification.urgency}
